@@ -52,15 +52,15 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
     <![endif]-->
 
     <!-- ///////PASTA BOOTSTRAP ////////////////////-->
-   
-  <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
 
 
- <script src="jquery-min.js"></script>
- <script src="jquery-ui.js"></script>
- <script src="jquery-ui.min.js"></script>
-<script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- ///////PASTA BOOTSTRAP ////////////////////-->
 
@@ -84,13 +84,14 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                
-              
+
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  <?php echo $_SESSION["nome"]?> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                        <?php echo $_SESSION["nome"]?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                       
-                      
+
+
                         <li>
                             <a href="modifica_senha.php"><i class="fa fa-fw fa-gear"></i> Trocar senha</a>
                         </li>
@@ -123,12 +124,12 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
                         <a href="consulta_patrimonio.php"><i class="fa fa-fw fa-check"></i> Consulta Patrimonio</a>
 
                     </li>
-                     <li>
+                    <li>
                         <a href="cadastro_adm.php"><i class="fa fa-fw fa-check"></i> Enviar eqp almox</a>
                     </li>
-                   
-                   
-                   
+
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -155,196 +156,277 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
 
 
 
-              
-               
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-list fa-5x"></i>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-list fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_tot"; ?>
                                     </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo "$conta_tot"; ?></div>
-                                        <div>TOTAL EQP!</div>
-                                    </div>
+                                    <div>TOTAL EQP!</div>
                                 </div>
                             </div>
-                            <a href="pesq_adm_total.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                     </a>
-                                        <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <a   href="pesq_eqp_especifico.php?eqp=MÁQUINA DE FUSÃO&uf=PR""> <?php echo "$conta_fusao"; ?> </a> <br>
-                                    POWER METER: <a   href="pesq_eqp_especifico.php?eqp=POWER METER&uf=PR""> <?php echo "$conta_power"; ?> </a> <br>
-                                     CLIVADOR: <a   href="pesq_eqp_especifico.php?eqp=CLIVADOR&uf=PR""> <?php echo "$conta_clivador"; ?> </a> <br>
-                                      IDENTIFICADOR DE FIBRA: <a   href="pesq_eqp_especifico.php?eqp=IDENTIFICADOR DE FIBRA&uf=PR""> <?php echo "$conta_id"; ?> </a> <br>
-                                       FONTE DE LUZ: <a   href="pesq_eqp_especifico.php?eqp=FONTE DE LUZ LASER&uf=PR""> <?php echo "$conta_fonte"; ?> </a> <br>
-                                        BOBINA DE LANÇAMENTO: <a   href="pesq_eqp_especifico.php?eqp=BOBINA DE LANÇAMENTO DE TESTE&uf=PR""> <?php echo "$conta_bobina"; ?> </a> <br>
-                                        OTDR: <a   href="pesq_eqp_especifico.php?eqp=OTDR&uf=PR""> <?php echo "$conta_otdr"; ?> </a> <br>
-                                         MOTO SERRA: <a   href="pesq_eqp_especifico.php?eqp=MOTO SERRA&uf=PR""> <?php echo "$conta_serra"; ?> </a> <br>
-                                         MOTO BOMBA: <a   href="pesq_eqp_especifico.php?eqp=MOTO BOMBA&uf=PR""> <?php echo "$conta_bomba"; ?> </a> <br>
-                                          MOTO PODA: <a   href="pesq_eqp_especifico.php?eqp=MOTO PODA&uf=PR""> <?php echo "$conta_poda"; ?>  </a> <br>
-
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-
-                                </div>
-                           
                         </div>
-                    </div>
-                           <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-cogs fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"> <?php echo "$conta_campo"; ?> </div>
-                                        <div>EQP EM CAMPO</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_reparo.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                      </a>
-                                     <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_campo"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_campo"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_campo"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_campo"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_campo"; ?> <br>
-                                      BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_campo"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_campo"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_campo"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_campo"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_campo"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                          
+                        <a href="pesq_adm_total.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO: <a href="pesq_eqp_especifico.php?eqp=MÁQUINA DE FUSÃO&uf=PR""> <?php echo "
+                                    $conta_fusao"; ?> </a> <br>
+                                POWER METER: <a href="pesq_eqp_especifico.php?eqp=POWER METER&uf=PR""> <?php echo "
+                                    $conta_power"; ?> </a> <br>
+                                CLIVADOR: <a href="pesq_eqp_especifico.php?eqp=CLIVADOR&uf=PR""> <?php echo "
+                                    $conta_clivador"; ?> </a> <br>
+                                IDENTIFICADOR DE FIBRA: <a href="pesq_eqp_especifico.php?eqp=IDENTIFICADOR DE FIBRA&uf=PR""> <?php echo "
+                                    $conta_id"; ?> </a> <br>
+                                FONTE DE LUZ: <a href="pesq_eqp_especifico.php?eqp=FONTE DE LUZ LASER&uf=PR""> <?php echo "
+                                    $conta_fonte"; ?> </a> <br>
+                                BOBINA DE LANÇAMENTO: <a href="pesq_eqp_especifico.php?eqp=BOBINA DE LANÇAMENTO DE TESTE&uf=PR""> <?php echo "
+                                    $conta_bobina"; ?> </a> <br>
+                                OTDR: <a href="pesq_eqp_especifico.php?eqp=OTDR&uf=PR""> <?php echo " $conta_otdr"; ?>
+                                </a> <br>
+                                MOTO SERRA: <a href="pesq_eqp_especifico.php?eqp=MOTO SERRA&uf=PR""> <?php echo "
+                                    $conta_serra"; ?> </a> <br>
+                                MOTO BOMBA: <a href="pesq_eqp_especifico.php?eqp=MOTO BOMBA&uf=PR""> <?php echo "
+                                    $conta_bomba"; ?> </a> <br>
+                                MOTO PODA: <a href="pesq_eqp_especifico.php?eqp=MOTO PODA&uf=PR""> <?php echo "
+                                    $conta_poda"; ?> </a> <br>
+                                MAQUINA DE ESPINAR: <a href="pesq_eqp_especifico.php?eqp=MAQUINA DE ESPINAR&uf=PR""> <?php echo "
+                                    $maquina_espinar"; ?> </a> <br>
+                                IMPRESSORA: <a href="pesq_eqp_especifico.php?eqp=IMPRESSORA PORTATIL&uf=PR""> <?php echo "
+                                    $impressora"; ?> </a> <br>
+                                DETECTOR DE GAS: <a href="pesq_eqp_especifico.php?eqp=DETECTOR DE GAS&uf=PR""> <?php echo "
+                                    $detector"; ?> </a> <br>
+                                CATRACA: <a href="pesq_eqp_especifico.php?eqp=CATRACA&uf=PR""> <?php echo "
+                                    $catraca"; ?> </a> <br>
+
+                            </div><br>
                         </div>
-                    </div>
-
-                     <!-- /.row -->
-
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-cogs fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"> <?php echo "$conta_rep"; ?> </div>
-                                        <div>EQP EM REPARO</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_reparo.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                      </a>
-                                     <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_rep"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_rep"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_rep"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_rep"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_rep"; ?> <br>
-                                      BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_rep"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_rep"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_rep"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_rep"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_rep"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                          
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
- <div class="row">
-                  
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-plane fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo "$conta_tran"; ?></div>
-                                        <div>EM TRANSITO !</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_transito.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    </a>
-                                    <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_tran"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_tran"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_tran"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_tran"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_tran"; ?> <br>
-                                       BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_tran"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_tran"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_tran"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_tran"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_tran"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            
-                        </div>
+                        <div class="clearfix"></div>
 
                     </div>
-
 
                 </div>
-<div id="page-wrapper">
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cogs fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_campo"; ?>
+                                    </div>
+                                    <div>EQP EM CAMPO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_reparo.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_campo"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_campo"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_campo"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_campo"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_campo"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_campo"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_campo"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_campo"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_campo"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_campo"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_campo"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_campo"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_campo"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_campo"; ?><br>
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- /.row -->
+
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cogs fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_rep"; ?>
+                                    </div>
+                                    <div>EQP EM REPARO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_reparo.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_rep"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_rep"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_rep"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_rep"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_rep"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_rep"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_rep"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_rep"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_rep"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_rep"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_rep"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_rep"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_rep"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_rep"; ?><br>
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-plane fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_tran"; ?>
+                                    </div>
+                                    <div>EM TRANSITO !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_transito.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_tran"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_tran"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_tran"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_tran"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_tran"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_tran"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_tran"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_tran"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_tran"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_tran"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_tran"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_tran"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_tran"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_tran"; ?><br>
+                                
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div id="page-wrapper">
 
             <div class="container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        
+
                         <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> SANTA CATARINA
@@ -356,196 +438,278 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
 
 
 
-              
-               
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-list fa-5x"></i>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-list fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_tot_sc"; ?>
                                     </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo "$conta_tot_sc"; ?></div>
-                                        <div>TOTAL EQP!</div>
-                                    </div>
+                                    <div>TOTAL EQP!</div>
                                 </div>
                             </div>
-                            <a href="pesq_adm_total.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                     </a>
-                                        <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <a   href="pesq_eqp_especifico.php?eqp=MÁQUINA DE FUSÃO&uf=SC""> <?php echo "$conta_fusao_sc"; ?> </a> <br>
-                                    POWER METER: <a   href="pesq_eqp_especifico.php?eqp=POWER METER&uf=SC""> <?php echo "$conta_power_sc"; ?> </a> <br>
-                                     CLIVADOR: <a   href="pesq_eqp_especifico.php?eqp=CLIVADOR&uf=SC""> <?php echo "$conta_clivador_sc"; ?> </a> <br>
-                                      IDENTIFICADOR DE FIBRA: <a   href="pesq_eqp_especifico.php?eqp=IDENTIFICADOR DE FIBRA&uf=SC""> <?php echo "$conta_id_sc"; ?> </a> <br>
-                                       FONTE DE LUZ: <a   href="pesq_eqp_especifico.php?eqp=FONTE DE LUZ LASER&uf=SC""> <?php echo "$conta_fonte_sc"; ?> </a> <br>
-                                        BOBINA DE LANÇAMENTO: <a   href="pesq_eqp_especifico.php?eqp=BOBINA DE LANÇAMENTO DE TESTE&uf=SC""> <?php echo "$conta_bobina_sc"; ?> </a> <br>
-                                        OTDR: <a   href="pesq_eqp_especifico.php?eqp=OTDR""> <?php echo "$conta_otdr_sc"; ?> </a> <br>
-                                         MOTO SERRA: <a   href="pesq_eqp_especifico.php?eqp=MOTO SERRA&uf=SC""> <?php echo "$conta_serra_sc"; ?> </a> <br>
-                                         MOTO BOMBA: <a   href="pesq_eqp_especifico.php?eqp=MOTO BOMBA&uf=SC""> <?php echo "$conta_bomba_sc"; ?> </a> <br>
-                                          MOTO PODA: <a   href="pesq_eqp_especifico.php?eqp=MOTO PODA&uf=SC""> <?php echo "$conta_poda_sc"; ?>  </a> <br>
-
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-
-                                </div>
-                           
                         </div>
-                    </div>
-                           <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-cogs fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"> <?php echo "$conta_campo_sc"; ?> </div>
-                                        <div>EQP EM CAMPO</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_reparo.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                      </a>
-                                     <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
+                        <a href="pesq_adm_total.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO: <a href="pesq_eqp_especifico.php?eqp=MÁQUINA DE FUSÃO&uf=SC""> <?php echo "
+                                    $conta_fusao_sc"; ?> </a> <br>
+                                POWER METER: <a href="pesq_eqp_especifico.php?eqp=POWER METER&uf=SC""> <?php echo "
+                                    $conta_power_sc"; ?> </a> <br>
+                                CLIVADOR: <a href="pesq_eqp_especifico.php?eqp=CLIVADOR&uf=SC""> <?php echo "
+                                    $conta_clivador_sc"; ?> </a> <br>
+                                IDENTIFICADOR DE FIBRA: <a href="pesq_eqp_especifico.php?eqp=IDENTIFICADOR DE FIBRA&uf=SC""> <?php echo "
+                                    $conta_id_sc"; ?> </a> <br>
+                                FONTE DE LUZ: <a href="pesq_eqp_especifico.php?eqp=FONTE DE LUZ LASER&uf=SC""> <?php echo "
+                                    $conta_fonte_sc"; ?> </a> <br>
+                                BOBINA DE LANÇAMENTO: <a href="pesq_eqp_especifico.php?eqp=BOBINA DE LANÇAMENTO DE TESTE&uf=SC""> <?php echo "
+                                    $conta_bobina_sc"; ?> </a> <br>
+                                OTDR: <a href="pesq_eqp_especifico.php?eqp=OTDR""> <?php echo " $conta_otdr_sc"; ?> </a>
+                                <br>
+                                MOTO SERRA: <a href="pesq_eqp_especifico.php?eqp=MOTO SERRA&uf=SC""> <?php echo "
+                                    $conta_serra_sc"; ?> </a> <br>
+                                MOTO BOMBA: <a href="pesq_eqp_especifico.php?eqp=MOTO BOMBA&uf=SC""> <?php echo "
+                                    $conta_bomba_sc"; ?> </a> <br>
+                                MOTO PODA: <a href="pesq_eqp_especifico.php?eqp=MOTO PODA&uf=SC""> <?php echo "
+                                    $conta_poda_sc"; ?> </a> <br>
+                                    MAQUINA DE ESPINAR: <a href="pesq_eqp_especifico.php?eqp=MAQUINA DE ESPINAR&uf=SC""> <?php echo "
+                                    $maquina_espinar_sc"; ?> </a> <br>
+                                IMPRESSORA: <a href="pesq_eqp_especifico.php?eqp=IMPRESSORA PORTATIL&uf=SC""> <?php echo "
+                                    $impressora_sc"; ?> </a> <br>
+                                DETECTOR DE GAS: <a href="pesq_eqp_especifico.php?eqp=DETECTOR DE GAS&uf=SC""> <?php echo "
+                                    $detector_sc"; ?> </a> <br>
+                                CATRACA: <a href="pesq_eqp_especifico.php?eqp=CATRACA&uf=SC""> <?php echo "
+                                    $catraca_sc"; ?> </a> <br>
                                     
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_campo_sc"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_campo_sc"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_campo_sc"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_campo_sc"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_campo_sc"; ?> <br>
-                                      BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_campo_sc"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_campo_sc"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_campo_sc"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_campo_sc"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_campo_sc"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                          
+
+                            </div><br>
                         </div>
-                    </div>
-
-                     <!-- /.row -->
-
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-cogs fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"> <?php echo "$conta_rep_sc"; ?> </div>
-                                        <div>EQP EM REPARO</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_reparo.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                      </a>
-                                     <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_rep_sc"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_rep_sc"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_rep_sc"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_rep_sc"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_rep_sc"; ?> <br>
-                                      BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_rep_sc"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_rep_sc"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_rep_sc"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_rep_sc"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_rep_sc"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                          
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
- <div class="row">
-                  
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-plane fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo "$conta_tran_sc"; ?></div>
-                                        <div>EM TRANSITO !</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="pesq_adm_transito.php">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Ver detalhes</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    </a>
-                                    <div class="row">
-                                    <div class="col-xs-12"><br>
-                                        
-                                    
-                                   MÁQUINA DE FUSÃO: <?php echo "$conta_fusao_tran_sc"; ?> <br>
-                                    POWER METER: <?php echo "$conta_power_tran_sc"; ?> <br>
-                                     CLIVADOR: <?php echo "$conta_clivador_tran_sc"; ?> <br>
-                                      IDENTIFICADOR DE FIBRA: <?php echo "$conta_id_tran_sc"; ?> <br>
-                                       FONTE DE LUZ:<?php echo "$conta_fonte_tran_sc"; ?> <br>
-                                       BOBINA DE LANÇAMENTO:<?php echo "$conta_bobina_tran_sc"; ?> <br>
-                                        OTDR: <?php echo "$conta_otdr_tran_sc"; ?><br>
-                                         MOTO SERRA:<?php echo "$conta_serra_tran_sc"; ?> <br>
-                                         MOTO BOMBA: <?php echo "$conta_bomba_tran_sc"; ?><br>
-                                          MOTO PODA:<?php echo "$conta_poda_tran_sc"; ?> <br>
-                                          </div><br>
-                                </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            
-                        </div>
+                        <div class="clearfix"></div>
 
                     </div>
-
 
                 </div>
-                  </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cogs fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_campo_sc"; ?>
+                                    </div>
+                                    <div>EQP EM CAMPO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_reparo.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_campo_sc"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_campo_sc"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_campo_sc"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_campo_sc"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_campo_sc"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_campo_sc"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_campo_sc"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_campo_sc"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_campo_sc"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_campo_sc"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_campo_sc"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_campo_sc"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_campo_sc"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_campo_sc"; ?><br>
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- /.row -->
+
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cogs fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_rep_sc"; ?>
+                                    </div>
+                                    <div>EQP EM REPARO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_reparo.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_rep_sc"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_rep_sc"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_rep_sc"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_rep_sc"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_rep_sc"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_rep_sc"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_rep_sc"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_rep_sc"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_rep_sc"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_rep_sc"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_campo_sc"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_campo_sc"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_campo_sc"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_campo_sc"; ?><br>
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
 
 
 
-                <!-- /.row -->
 
-               
-              <p style="margin-right:9%; font-size: 10px;"><strong>© Copyright Serede S/A Desenvolvimento Rudinei Rossales  </strong></p>
+
+
+
+
+
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-plane fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <?php echo "$conta_tran_sc"; ?>
+                                    </div>
+                                    <div>EM TRANSITO !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pesq_adm_transito.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">Ver detalhes</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12"><br>
+
+
+                                MÁQUINA DE FUSÃO:
+                                <?php echo "$conta_fusao_tran_sc"; ?> <br>
+                                POWER METER:
+                                <?php echo "$conta_power_tran_sc"; ?> <br>
+                                CLIVADOR:
+                                <?php echo "$conta_clivador_tran_sc"; ?> <br>
+                                IDENTIFICADOR DE FIBRA:
+                                <?php echo "$conta_id_tran_sc"; ?> <br>
+                                FONTE DE LUZ:
+                                <?php echo "$conta_fonte_tran_sc"; ?> <br>
+                                BOBINA DE LANÇAMENTO:
+                                <?php echo "$conta_bobina_tran_sc"; ?> <br>
+                                OTDR:
+                                <?php echo "$conta_otdr_tran_sc"; ?><br>
+                                MOTO SERRA:
+                                <?php echo "$conta_serra_tran_sc"; ?> <br>
+                                MOTO BOMBA:
+                                <?php echo "$conta_bomba_tran_sc"; ?><br>
+                                MOTO PODA:
+                                <?php echo "$conta_poda_tran_sc"; ?> <br>
+                                MÁQUINA DE ESPINAR:
+                                <?php echo "$maquina_espinar_campo_sc"; ?><br>
+                                IMPRESSORA:
+                                <?php echo "$impressora_campo_sc"; ?><br>
+                                DETECTOR DE GÁS:
+                                <?php echo "$detector_campo_sc"; ?><br>
+                                CATRACA:
+                                <?php echo "$catraca_campo_sc"; ?><br>
+                            </div><br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- /.row -->
+
+
+    <p style="margin-right:9%; font-size: 10px;"><strong>© Copyright Serede S/A Desenvolvimento Rudinei Rossales
+        </strong></p>
 
 </body>
 

@@ -193,7 +193,7 @@ function loginsuccessfully()
   <select class="form-control " id="eqp" name="eqp"  >
 
 
-    <option value="MÁQUINA DE FUSÃO">  MÁQUINA DE FUSÃO </option>
+    <option value="MAQUINA DE FUSAO">  MÁQUINA DE FUSÃO </option>
 <option value="POWER METER" > POWER METER  </option>
 <option value="CLIVADOR">  CLIVADOR </option>
 <option value="IDENTIFICADOR DE FIBRA"> IDENTIFICADOR DE FIBRA  </option>
@@ -203,6 +203,10 @@ function loginsuccessfully()
 <option value="MOTO SERRA"> MOTO SERRA  </option>
 <option value="MOTO BOMBA"> MOTO BOMBA  </option>
 <option value="MOTO PODA"> MOTO PODA  </option>
+<option value="MAQUINA DE ESPINAR"> MÁQUINA DE ESPINAR  </option>
+<option value="IMPRESSORA PORTATIL"> IMPRESSORA PORTATIL  </option>
+<option value="DETECTOR DE GAS"> DETECTOR DE GÁS  </option>
+<option value="CATRACA"> CATRACA  </option>
 
 
   </select>

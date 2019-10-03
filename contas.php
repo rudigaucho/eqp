@@ -98,7 +98,7 @@ while ($dado = mysql_fetch_assoc($sql4))
 
 // CONTAS PARA TOTAL DE EQUIPAMENTOS
 
-$sql5 =  mysql_query ("select  count(*) as conta_fusao from patrimonio where equip = 'MÁQUINA DE FUSÃO' and uf = 'PR' ");
+$sql5 =  mysql_query ("select  count(*) as conta_fusao from patrimonio where equip = 'MAQUINA DE FUSAO' and uf = 'PR' ");
 
 if (mysql_num_rows($sql5) > 0)
 
@@ -281,7 +281,77 @@ while ($dado = mysql_fetch_assoc($sql32))
 
 }
 
+$sql46 =  mysql_query ("select  count(*) as maquina_espinar from patrimonio where equip = 'MAQUINA DE ESPINAR'  and uf = 'PR'");
 
+if (mysql_num_rows($sql46) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql46))
+  {
+     $maquina_espinar= $dado ["maquina_espinar"]; 
+  }
+
+
+}
+
+$sql47 =  mysql_query ("select  count(*) as impressora from patrimonio where equip = 'IMPRESSORA PORTATIL'  and uf = 'PR'");
+
+if (mysql_num_rows($sql47) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql47))
+  {
+     $impressora= $dado ["impressora"]; 
+  }
+
+
+}
+
+$sql48 =  mysql_query ("select  count(*) as detector from patrimonio where equip = 'DETECTOR DE GAS'  and uf = 'PR'");
+
+if (mysql_num_rows($sql48) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql48))
+  {
+     $detector= $dado ["detector"]; 
+  }
+
+
+}
+
+$sql58 =  mysql_query ("select  count(*) as catraca from patrimonio where equip = 'CATRACA'  and uf = 'PR'");
+
+if (mysql_num_rows($sql58) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql58))
+  {
+     $catraca= $dado ["catraca"]; 
+  }
+
+
+}
 
 
 
@@ -296,7 +366,7 @@ while ($dado = mysql_fetch_assoc($sql32))
 
 
 
-$sql14 =  mysql_query ("select  count(*) as conta_fusao_rep from patrimonio where equip = 'MÁQUINA DE FUSÃO' and status_equip != 2 and uf = 'PR' ");
+$sql14 =  mysql_query ("select  count(*) as conta_fusao_rep from patrimonio where equip = 'MAQUINA DE FUSAO' and status_equip != 2 and uf = 'PR' ");
 
 if (mysql_num_rows($sql14) > 0)
 
@@ -480,6 +550,79 @@ while ($dado = mysql_fetch_assoc($sql33))
 
 }
 
+$sql49 =  mysql_query ("select  count(*) as maquina_espinar_rep from patrimonio where equip = 'MAQUINA DE ESPINAR' and status_equip != 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql49) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql49))
+  {
+     $maquina_espinar_rep= $dado ["maquina_espinar_rep"]; 
+  }
+
+
+}
+
+$sql50 =  mysql_query ("select  count(*) as impressora_rep from patrimonio where equip = 'IMPRESSORA PORTATIL' and status_equip != 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql50) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql50))
+  {
+     $impressora_rep= $dado ["impressora_rep"]; 
+  }
+
+
+}
+
+$sql51 =  mysql_query ("select  count(*) as detector_rep from patrimonio where equip = 'DETECTOR DE GAS' and status_equip != 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql51) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql51))
+  {
+     $detector_rep= $dado ["detector_rep"]; 
+  }
+
+
+}
+
+$sql59 =  mysql_query ("select  count(*) as catraca_rep from patrimonio where equip = 'CATRACA' and status_equip != 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql59) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql59))
+  {
+     $catraca_rep= $dado ["catraca_rep"]; 
+  }
+
+
+}
+
+
 
 
 //   CONSTAS EQP EM TRANSITO
@@ -487,7 +630,7 @@ while ($dado = mysql_fetch_assoc($sql33))
 
 
 
-$sql23 =  mysql_query ("select  count(*) as conta_fusao_tran from patrimonio where equip = 'MÁQUINA DE FUSÃO' and status_equip = 0 and uf = 'PR'");
+$sql23 =  mysql_query ("select  count(*) as conta_fusao_tran from patrimonio where equip = 'MAQUINA DE FUSAO' and status_equip = 0 and uf = 'PR'");
 
 if (mysql_num_rows($sql23) > 0)
 
@@ -670,6 +813,79 @@ while ($dado = mysql_fetch_assoc($sql34))
 
 }
 
+$sql52 =  mysql_query ("select  count(*) as maquina_espinar_tran from patrimonio where equip = 'MAQUINA DE ESPINAR' and status_equip = 0 and uf = 'PR'");
+
+if (mysql_num_rows($sql52) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql52))
+  {
+     $maquina_espinar_tran= $dado ["maquina_espinar_tran"]; 
+  }
+
+
+}
+
+$sql53 =  mysql_query ("select  count(*) as impressora_tran from patrimonio where equip = 'IMPRESSORA PORTATIL' and status_equip = 0 and uf = 'PR'");
+
+if (mysql_num_rows($sql53) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql53))
+  {
+     $impressora_tran= $dado ["impressora_tran"]; 
+  }
+
+
+}
+
+$sql54 =  mysql_query ("select  count(*) as detector_tran from patrimonio where equip = 'DETECTOR DE GAS' and status_equip = 0 and uf = 'PR'");
+
+if (mysql_num_rows($sql54) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql54))
+  {
+     $detector_tran= $dado ["detector_tran"]; 
+  }
+
+
+}
+
+$sql60 =  mysql_query ("select  count(*) as catraca_tran from patrimonio where equip = 'CATRACA' and status_equip = 0 and uf = 'PR'");
+
+if (mysql_num_rows($sql60) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql60))
+  {
+     $catraca_tran= $dado ["catraca_tran"]; 
+  }
+
+
+}
+
+
 
 
 
@@ -679,7 +895,7 @@ while ($dado = mysql_fetch_assoc($sql34))
 
 
 
-$sql35 =  mysql_query ("select  count(*) as conta_fusao_campo from patrimonio where equip = 'MÁQUINA DE FUSÃO' and status_equip = 2  and uf = 'PR'");
+$sql35 =  mysql_query ("select  count(*) as conta_fusao_campo from patrimonio where equip = 'MAQUINA DE FUSAO' and status_equip = 2  and uf = 'PR'");
 
 if (mysql_num_rows($sql35) > 0)
 
@@ -860,6 +1076,79 @@ while ($dado = mysql_fetch_assoc($sql44))
   }
 
 
+}
+
+
+$sql55 =  mysql_query ("select  count(*) as maquina_espinar_campo from patrimonio where equip = 'MAQUINA DE ESPINAR' and status_equip = 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql55) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql55))
+  {
+     $maquina_espinar_campo= $dado ["maquina_espinar_campo"]; 
+  }
+
+
+}
+
+
+$sql56 =  mysql_query ("select  count(*) as impressora_campo from patrimonio where equip = 'IMPRESSORA PORTATIL' and status_equip = 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql56) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql56))
+  {
+     $impressora_campo= $dado ["impressora_campo"]; 
+  }
+
+
+}
+
+$sql57 =  mysql_query ("select  count(*) as detector_campo from patrimonio where equip = 'DETECTOR DE GAS' and status_equip = 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql57) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql57))
+  {
+     $detector_campo= $dado ["detector_campo"]; 
+  }
+
+
+
+  $sql61 =  mysql_query ("select  count(*) as catraca_campo from patrimonio where equip = 'CATRACA' and status_equip = 2 and uf = 'PR'");
+
+if (mysql_num_rows($sql61) > 0)
+
+{
+
+
+
+
+
+while ($dado = mysql_fetch_assoc($sql61))
+  {
+     $catraca_campo= $dado ["catraca_campo"]; 
+  }
+
+}
 }
 
 ?>

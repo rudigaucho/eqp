@@ -3,7 +3,7 @@ error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 
 $host = "127.0.0.1";
 $user = "root";
-$pass = "r00tS&r&dS@";
+$pass = "";
 $database ="equipamentos";
 $connection = mysql_connect($host,$user,$pass,$database) or die (mysql_error());
 mysql_select_db($database)or die (mysql_error());
